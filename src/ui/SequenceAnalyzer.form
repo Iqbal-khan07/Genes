@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ui.SequenceAnalyzer">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="1075" height="566"/>
+    </constraints>
+    <properties>
+      <inheritsPopupMenu value="true"/>
+      <maximumSize width="1000" height="500"/>
+      <minimumSize width="1000" height="500"/>
+      <opaque value="false"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="10d74" class="javax.swing.JLabel">
+        <constraints border-constraint="North"/>
+        <properties>
+          <font name="JetBrains Mono" size="20" style="1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Gene Sequence Analyzer"/>
+        </properties>
+      </component>
+      <grid id="969ea" layout-manager="GridBagLayout">
+        <constraints border-constraint="West"/>
+        <properties/>
+        <border type="empty">
+          <size top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children>
+          <component id="a672a" class="javax.swing.JTextField" binding="numberOfSequenceField">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="92d39" class="javax.swing.JLabel" binding="numberOfSequenceLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Number of Squences"/>
+            </properties>
+          </component>
+          <component id="96d8" class="javax.swing.JLabel" binding="heuristicLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="Heuristic"/>
+            </properties>
+          </component>
+          <component id="30418" class="javax.swing.JComboBox" binding="heuristicComboBox">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="Similarity"/>
+                <item value="Difference"/>
+              </model>
+            </properties>
+          </component>
+          <component id="3dcd" class="javax.swing.JLabel" binding="enterSequenceLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="5" right="0" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16" style="1"/>
+              <text value="Enter Squences:"/>
+            </properties>
+          </component>
+          <scrollpane id="52d82">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <verticalScrollBarPolicy value="20"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="a0946" class="javax.swing.JTextArea" binding="sequenceInputArea">
+                <constraints/>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <grid id="203dd" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="c5192" class="javax.swing.JButton" binding="process">
+                <constraints/>
+                <properties>
+                  <text value="Process"/>
+                </properties>
+              </component>
+              <component id="dfed5" class="javax.swing.JButton" binding="reset">
+                <constraints/>
+                <properties>
+                  <text value="Reset"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="f12f5" binding="sequenceOutputPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+        <border type="line" title="Output">
+          <font/>
+          <title-color color="-4473925"/>
+          <color color="-4473925"/>
+        </border>
+        <children>
+          <component id="a22fb" class="javax.swing.JLabel" binding="errorLabel">
+            <constraints border-constraint="North"/>
+            <properties>
+              <enabled value="false"/>
+              <font name="Consolas" size="14" style="1"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <scrollpane id="7173">
+            <constraints border-constraint="Center"/>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="e69d9" class="javax.swing.JTextArea" binding="sequenceOutput">
+                <constraints/>
+                <properties>
+                  <editable value="false"/>
+                  <font name="Consolas" size="14" style="0"/>
+                  <lineWrap value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
